@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+        @font-face {
+            font-family: 'myFont';
+            src: url('Grunge.ttf');
+        }
+        body{
+          position:fixed; 
+          font-family: myFont; 
+          width:100%;
+          height:100%;
+        }
+        nav{
+            width:100%;
+            height: 20px;
+            background-color: rgb(248, 181, 57);
+        }
+        .header{
+            display:flex;
+            font-size: 3em;
+            justify-content: space-between;
+        }
+        .header .item2{
+            color: orange;
+            font-size: 3em;
+        }
+        .header .item1 
+        {
+            line-height: 3em;
+            position: relative;
+            left: 3%;    
+        }
+        .header .item3 
+        {
+            line-height: 3em;
+            position: relative;
+            right: 3%;  
+        }
+        .wrap{
+            width:100%;
+            height:100%;
+            position:relative;
+        }
+        .wrap .yright{
+            position:absolute;
+            width:4%;
+            height:3%;
+            top:40%;
+            right:8%;
+            transform: rotate(20deg);
+            z-index: 2;
+        }
+        .wrap .yleft{
+            position:absolute;
+            width:4%;
+            height:3%;
+            top:40%;
+            left:10%;
+            transform: rotate(165deg);
+            z-index: 2;
+        }
+        .wrap .bright{
+            position:absolute;
+            width:4%;
+            height:3%;
+            top:40%;
+            right:8%;
+            transform: rotate(20deg);
+            z-index: 2;
+        }
+        .wrap .bleft{
+            position:absolute;
+            width:4%;
+            height:3%;
+            top:40%;
+            left:10%;
+            transform: rotate(165deg);
+            z-index: 2;
+        }
+        .cart{
+            position: absolute;
+            background-color: black;
+            height: 100%;
+            width: 20%;
+            top:0;
+            right: 0;
+            font-size:28px;
+            color:white;
+            text-align: center;
+            font-weight:bold;
+        }
+        .menu{
+            position: absolute;
+            background-color: black;
+            height: 100%;
+            width: 20%;
+            top:0;
+            left: 0;
+            font-size:28px;
+            color:white;
+            text-align: center;
+            font-weight:bold;
+        }
+        /*.black .menu .ndisplay{      不成功
+            display: none;
+        }
+        .black .cart .ndisplay{
+            display: none;
+        }*/
+        .black{
+            height: 100%;
+        }
+        .black .menu {
+            display: none;
+            z-index: 4;
+        }
+        .black .cart {
+            display: none;
+            z-index: 4;
+        }
+        .black h{
+            position:relative;
+            top:5%;
+            color:rgb(245, 212, 166);
+        }
+        .black .item1{
+            position:relative;
+            top:3.2%;
+            font-size: 30px;
+            color:rgb(245, 212, 166);
+        }
+        
+        .black .item2{
+            position:relative;
+            top:10%;
+            
+        }
+        .black .menu .item2{
+            margin: 30px;
+        }
+        .black .cart .item3{
+            font-size: 20px;
+            position:relative;
+            top:18%;
+        }
+        .black img{
+            position:absolute;
+            height: 2.5%;
+            width: 5%;
+            top:2%;
+        }
+        .black .cart img{
+            right:15%;
+        }
+        .black .menu img{
+            left:15%;
+        }
+        
+        .header .item1:hover{
+            color:rgb(245, 212, 166);
+        }
+        .header .item3:hover{
+            color:rgb(245, 212, 166);
+        }
+
+        .box{
+            background-color: antiquewhite;
+            width: 160px;
+            height: 700px;
+            position:absolute;
+        }
+        .box img{
+            width:100%;
+            height:100%;
+        }
+        .iright{
+            position: absolute;
+            bottom: 0;
+            background-color: aliceblue;
+            width: 60px;
+            height: 500px;
+            opacity: 0.8;
+        }
+        .ileft{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: aliceblue;
+            width: 75px;
+            height: 555px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <div class="wrap">
+        <nav> </nav>
+        <div class="header">
+            <div class="item item1">=MENU</div>
+            <div class="item item2">HANGAR24</div>
+            <div class="item item3">=CART</div>
+        </div>
+        <!--img src="beer.jpg" class="bear" alt="bear"-->
+        <img src="arrow-yellow.png"class="yright" alt="right">
+        <img src="arrow-yellow.png" class="yleft" alt="left"> 
+        <img src="arrow-black.png"class="bright" alt="right">
+        <img src="arrow-black.png" class="bleft" alt="left">
+        <div class="container">
+            <div class="box">
+                <img src="beer_1.jpg"  alt="1">
+            </div>
+            <div class="box">
+                <img src="beer_2.jpg" alt="2">
+            </div>
+            <div class="box">
+                <img src="beer_3.jpg" alt="3">
+            </div>
+            <div class="box">
+                <img src="beer_4.jpg" alt="4">
+            </div>
+            <div class="box">
+                <img src="beer_5.jpg" alt="5">
+            </div>
+            <div class="box">
+                <img src="beer_6.jpg" alt="6">
+        </div>
+        <div class="black">
+            <div class="menu">
+                <h>MENEU</h>
+                <p class="item1">___</p>
+                <p class="item2">ABOUT</p>
+                <p class="item2">PRODICT</p>
+                <p class="item2">CONTACT</p>
+                <img src="x.png" alt="x">
+            </div>
+            <div class="cart">
+                <h>CART</h>
+                <p class="item1">__</p>
+                <p class="item2">YOUR CART IS</p>
+                <p class="item2">EMPTY</p>
+                <p class="item3">TOTAL:$0</p>
+                <img src="x.png" alt="x">
+            </div>
+        </div>
+    </div>
+    <div class="opacity">
+        <div class="item iright"></div>
+        <div class="item ileft"></div>
+    </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.header .item1').click(function(){
+                $('.black .menu').show();
+            })
+            $('.header .item3').click(function(){
+                $('.black .cart').show();
+            })
+            $('.menu img').click(function(){
+                $('.black .menu').hide();
+            })
+            $('.cart img').click(function(){
+                $('.black .cart').hide();
+            })
+            $('.wrap .bleft').mouseenter(function(){
+                $('.wrap .bleft').hide();
+            })
+            $('.wrap .yleft').mouseleave(function(){
+                $('.wrap .bleft').show();
+            })
+            $('.wrap .bright').mouseenter(function(){
+                $('.wrap .bright').hide();
+            })
+            $('.wrap .yright').mouseleave(function(){
+                $('.wrap .bright').show();
+            })
+
+        var r=2400;
+        var number=30;
+        var avd=360/number;
+        var ahd=avd*Math.PI/180;
+        var speed=2;
+        var centerh=2600;
+        var centerw=950;
+        
+        $(".box").each(function(index,element){
+            console.log((avd*index));
+            index+=8;
+            $(this).css({
+                "left":Math.sin((ahd*index))*r+centerw,
+                "top":Math.cos((ahd*index))*r+centerh
+            });
+        })
+       /* for(let j=0;j<1;j++)
+        {
+            for(let i=0;i<(avd/2);i++)
+            {
+                setTimeout(function() {fun_animat(false)}, 50 * i,j)
+            }
+        }*/
+        var fun_animat=function(direction){  //true=right false=left
+            speed=speed<360?speed:2;
+            if(direction==false){
+                speed+=2;
+            }
+            else{
+                speed=speed-2;
+            }
+            var ainhd=speed*Math.PI/180;
+            $(".box").each(function(index,element){
+                index+=8;
+                $(this).css({
+                "left":Math.sin((ahd*index+ainhd))*r+centerw,
+                "top":Math.cos((ahd*index+ainhd))*r+centerh});
+            });
+        }
+        for(let i=0;i<(avd/2)*4;i++){
+            setTimeout(function() {fun_animat(false)}, 80 * i)
+        }
+       
+        //setInterval(fun_animat,2000)
+        $('.yleft').click(function(){
+            for(let i=0;i<(avd/2);i++)
+            {
+                setTimeout(function() {fun_animat(false)}, 50 * i)
+            }
+        })
+        $('.yright').click(function(){
+            for(let i=0;i<(avd/2);i++)
+            {
+                setTimeout(function() {fun_animat(true)}, 50 * i)
+            }
+        })
+            
+    })
+    </script>
+</body>
+</html>
